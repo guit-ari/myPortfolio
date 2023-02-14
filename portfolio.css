@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*header*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 30px 100px;
+  z-index: 100000;
+}
+
+header.sticky {
+  padding: 5px 100px;
+  background: rgb(240, 229, 229);
+}
+header .logo {
+  position: relative;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.711);
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.495);
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+  font-size: 20px;
+}
+header.sticky .logo,
+header.sticky ul li a {
+  color: rgb(154, 102, 102);
+}
+
+header.sticky ul li a:hover {
+  color: white;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 13vh;
+  background-color: rgba(227, 184, 184, 0.499);
+}
+
+/*sottomenu*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 90px;
+  gap: 80px;
+  height: 100vh;
+}
+.col-img {
+  height: 100%;
+}
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+@media (max-width: 1130px) {
+  .profile-pic {
+    object-fit: contain;
+    width: 200px;
+    margin-left: 280px;
+  }
+  .container {
+    display: inline;
+  }
+  .col-1 {
+    padding: 0;
+  }
+}
+
+.container h1 {
+  font-size: 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 5px;
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+.container h3 {
+  font-size: 20px;
+  font-style: oblique;
+  color: rgb(149, 119, 124);
+  line-height: 30px;
+  font-weight: 300;
+}
+.col-1 {
+  padding-left: 13%;
+  margin-top: 150px;
+}
+
+/*container*/
+.about-container {
+  min-height: 100vh;
+  padding-top: 30px;
+}
+.about-container h2{
+  padding-bottom: 10px;
+  font-size: 26px;
+  
+}
+.about-item {
+  font-size: 20px;
+  padding-bottom: 50px;
+ 
+  
+}
+.about-item a {
+  text-decoration: none;
+  color: rgb(176, 108, 108);
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+.splide__slide {
+  opacity: 0.6;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+}
+
+.content-container {
+  background-color: rgba(211, 204, 204, 0.926);
+  font-size: 20px;
+  padding: 50px 100px;
+  color: white;
+}
+/*technologies*/
+.grid{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px 5px 30px;
+}
+
+.content-tec {
+  height: 100vh;
+  font-size: 23px;
+  background-color: white;
+  color: rgb(197, 137, 137);
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+}
+.tecno-container img{
+  width: 20%;
+  object-fit: cover;
+  transition: transform .2s; /* Animation */
+}
+.tecno-container img:hover{
+  transform: scale(1.5);
+  filter: grayscale(100%);
+}
+.tecno-container ul li{
+  width: 100%;
+  height: auto;
+  list-style: none;
+  gap: 20px;
+}
+.tec-description{
+  padding-bottom: 100px;
+  text-align: right;
+  color: rgba(196, 191, 191, 0.988);
+}
+
+.tecno-item ul{
+  display: flex;
+
+}
+/*projects*/
+.container-projects {
+  height: 100vh;
+  padding-top: 60px;
+  flex-wrap: wrap;
+  background-color: rgba(211, 204, 204, 0.926);
+  color: white;
+}
+.project-description{
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 20px;
+}
+.project-description h3{
+  padding-bottom: 10px;
+}
+.card-container{
+  display: flex;
+  padding-top: 50px;
+}
+.card {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  width: 280px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+}
+.card h1{
+  font-size: 20px;
+  color: rgb(211, 204, 204);
+}
+.card img{
+  width: 200px;
+  height: 200px;
+  object-fit:cover;
+ 
+}
+.title {
+  color: grey;
+  font-size: 10px;
+  padding: 10px;
+}
+.btn-cards{
+  display: flex;
+  color: #504545;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #e9b8b8;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+/*resume*/
+.resume-container {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-row-gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgba(144, 138, 138, 0.988);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section-container {
+  margin: 0;
+  padding: 10px;
+ padding-top: 50px;
+ 
+}
+
+.resume-description-border {
+  border-left: 3px solid var(--text-contrast-color);
+  padding-left: 20px;
+}
+
+
+.resume-header {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+}
+
+.resume-image {
+  display: block;
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  margin: auto;
+}
+
+
+
+.footer {
+  background-color: rgba(227, 122, 148, 0.829);
+  color: white;
+  font-size: 16px;
+  padding: 30px 300px;
+ 
+}
+.footer-content{
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+.footer  hr{
+  margin-top: 10px;
+
+}
+.social-font {
+  padding-top: 10px;
+}
+.social-font a {
+  color: inherit;
+  padding-right: 5px;
+}
+.social-font a:hover {
+  color: pink;
+}
+.contact{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  letter-spacing: 3px;
+}
+.contact a {
+  color: inherit;
+  padding-left: 5px;
+}
+.contact a:hover{
+  color: pink;
+}
