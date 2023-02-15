@@ -89,19 +89,7 @@ header.sticky ul li a:hover {
   object-fit: cover;
 
 }
-@media (max-width: 1130px) {
-  .profile-pic {
-    object-fit: contain;
-    width: 200px;
-    margin-left: 280px;
-  }
-  .container {
-    display: inline;
-  }
-  .col-1 {
-    padding: 0;
-  }
-}
+
 
 .container h1 {
   font-size: 60px;
@@ -345,7 +333,6 @@ button:hover, a:hover {
 }
 .footer-content{
   display: flex;
-  display: flex;
   justify-content: space-between;
 }
 .footer  hr{
@@ -375,3 +362,53 @@ button:hover, a:hover {
 .contact a:hover{
   color: pink;
 }
+@media only screen and (max-width: 400px) {
+
+  header{
+    padding: 10px 20px;
+  }
+  header ul{
+    display: none;
+  }
+  .profile-pic {
+    display: none;
+  }
+  .content-container{
+    padding: 10px;
+  }
+  .container{
+    max-width: 60%;   
+  }
+  .container h1{
+    font-size: 40px;
+  }
+  .container-projects{
+    height: auto;
+  }
+  .card-container{
+    flex-wrap: wrap;
+  }
+  .content-tec{
+    padding: 10px;
+  }
+  
+  .card{
+    margin-bottom: 10px;
+  }
+  .footer{
+  font-size: 10px;
+   padding:5px;
+  }
+  .footer i {
+    font-size: 13px;
+  }
+  .resume-container{
+    padding: 0;
+  }
+  .resume-container a{
+    display: none;
+  }
+
+  
+
+} 
