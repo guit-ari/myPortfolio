@@ -362,7 +362,7 @@ button:hover, a:hover {
 .contact a:hover{
   color: pink;
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
 
   header{
     padding: 10px 20px;
